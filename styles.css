@@ -13,17 +13,17 @@ button {
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 10rem;
-  height: 3rem;
   font-size: 1.2rem;
   padding: 0;
-  margin: .5rem;
   border-radius: 30px;
   cursor: pointer;
+  margin: 0.5rem auto;
+
 }
 
 h1 {
   font-size: 4rem;
+  text-align: center;
   font-style: bold;
   padding: 3rem 0 0 0;
   margin: 0;
@@ -41,6 +41,7 @@ p {
   font-size: 1.5rem;
   padding: 0;
   color: rgb(170, 170, 170);
+  text-align: center;
 }
 
 .navbar {
@@ -77,6 +78,15 @@ p {
   text-decoration: none;
   padding: 10px;
   font-size: .8rem;
+}
+
+.buttons {
+  display: flex;
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  outline: 1px solid red;
 }
 
 .hero {
@@ -140,4 +150,40 @@ p {
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+
+  padding: 0;
+  margin: 0 auto;
+  outline: 1px solid green;
+}
+
+.cards h1 {
+  font-size: 3rem;
+}
+
+.cards h2 {
+  font-size: 1.3rem;
+}
+
+.cards p {
+  font-size: 1rem;
+}
+
+.cards button {
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.cards .ipad {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  outline: 1px solid yellow;
 }
