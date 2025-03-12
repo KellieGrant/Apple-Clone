@@ -86,7 +86,6 @@ p {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  outline: 1px solid red;
 }
 
 .hero {
@@ -155,11 +154,8 @@ p {
 .cards {
   display: grid;
   grid-template-columns: 50% 50%;
-
-
-  padding: 0;
-  margin: 0 auto;
-  outline: 1px solid green;
+  height: 10vh;
+  margin: 1rem;
 }
 
 .cards h1 {
@@ -181,9 +177,89 @@ p {
 }
 
 .cards .ipad {
+  background-color: #f5f5f7;
   width: 100%;
+  height: 60vh;
   justify-content: center;
   align-items: center;
   place-items: center;
-  outline: 1px solid yellow;
+}
+
+.cards .ipad img {
+  outline: red solid 1px;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cards .iphone {
+  background-color: #f5f5f7;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+}
+
+.cards .iphone img {
+  outline: red solid 1px;
+  width: auto;
+  height:auto;
+}
+
+.cards .watch {
+  background-color: #f5f5f7;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+}
+
+.cards .watch img {
+  margin: 3rem;
+  outline: red solid 1px;
+}
+
+.cards .macbook-pro {
+  background-color: black;
+  color: #fff;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+}
+
+.cards .macbook-pro img {
+  outline: red solid 1px;
+  width: auto;
+  max-height: 60%;
+}
+
+.cards .airpods4 {
+  background-image: url(assets/images/airpods4\ girl.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+}
+
+.cards .trade-in {
+  background-color: #f5f5f7;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+}
+
+.cards .trade-in img {
+  max-width: 100%;
+  max-height: 60%;
+  object-fit: contain;
 }
