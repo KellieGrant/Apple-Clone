@@ -2,7 +2,9 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', Arial, sans-serif;
-  margin: 0;
+  max-width: 2600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 button {
@@ -18,14 +20,15 @@ button {
   border-radius: 30px;
   cursor: pointer;
   margin: 0.5rem auto;
-
+  width: 8rem;
+  height: 3rem;
 }
 
 h1 {
   font-size: 4rem;
   text-align: center;
   font-style: bold;
-  padding: 3rem 0 0 0;
+  padding: 4rem 0 0 0;
   margin: 0;
 }
 
@@ -88,13 +91,24 @@ p {
   gap: 10px;
 }
 
+.hero-section .cards {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.hero-section {
+  margin-top: 2rem;
+  width: 100%;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60%;
+  height: 40%;
   margin: 0;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -108,7 +122,7 @@ p {
 
 .macstudio {
   background-color: #f5f5f7;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .macstudio img {
@@ -119,7 +133,7 @@ p {
 
 .ipad-air {
   background: linear-gradient(180deg, #acdbed, #eff4f7);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .air {
@@ -153,11 +167,20 @@ p {
 
 .cards {
   display: grid;
-  grid-template-columns: 50% 50%;
-  height: 10vh;
-  margin: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 90vw;
+  margin: 1rem auto;
 }
 
+.cards-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 90%;
+
+}
 .cards h1 {
   font-size: 3rem;
 }
@@ -186,10 +209,12 @@ p {
 }
 
 .cards .ipad img {
-  outline: red solid 1px;
   width: auto;
   height: 100%;
   object-fit: contain;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .cards .iphone {
@@ -202,9 +227,11 @@ p {
 }
 
 .cards .iphone img {
-  outline: red solid 1px;
   width: auto;
-  height:auto;
+  height: 100%;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards .watch {
@@ -216,9 +243,24 @@ p {
   place-items: center;
 }
 
+.cards .watch h1 {
+  display: flex;
+  align-items: center;
+
+}
+
+.cards .watch h1 img {
+  width: 4rem;
+  height: 4rem;
+  vertical-align: middle;
+}
+
 .cards .watch img {
-  margin: 3rem;
-  outline: red solid 1px;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards .macbook-pro {
@@ -232,22 +274,39 @@ p {
 }
 
 .cards .macbook-pro img {
-  outline: red solid 1px;
   width: auto;
-  max-height: 60%;
+  height: 100%;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards .airpods4 {
   background-image: url(assets/images/airpods4\ girl.png);
+  color: #fff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 60vh;
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  place-items: center;
+  text-align: center;
 }
+
+.cards .airpods4 .content {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
 
 .cards .trade-in {
   background-color: #f5f5f7;
@@ -259,7 +318,19 @@ p {
 }
 
 .cards .trade-in img {
-  max-width: 100%;
-  max-height: 60%;
+  width: 100%;
   object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.previews-section {
+  outline: red solid 1px;
+  max-height: 40vh;
+}
+
+.previews-section .dope-theif {
+  background-image: url(assets/images/Movies/Dope\ Theif.jpg);
 }
