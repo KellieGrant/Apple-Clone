@@ -1,3 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navList = document.getElementById("nav-list");
+  
+    // Check if elements exist before adding event listener
+    if (hamburger && navList) {
+      hamburger.addEventListener("click", function () {
+        navList.classList.toggle("active");
+      });
+    } else {
+      console.error("Hamburger or Nav List element not found.");
+    }
+  });
+  
+
+
+
+//Slideshow section
+
 let slideIndex = 0;
 const slides = document.querySelector(".slides");
 const dots = document.querySelectorAll(".dot");

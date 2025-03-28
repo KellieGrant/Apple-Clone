@@ -52,15 +52,42 @@ p {
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 10px;
-  height: 2vh;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
 }
 
+/* Menu Container: Flexbox to align items */
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo Styling: Center it using flexbox */
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Nav List (Default Desktop View) */
 .nav-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -70,16 +97,11 @@ p {
   margin: 0 10px;
 }
 
-.nav-list li img {
-  width: 17px;
-  height: 17px;
-}
-
 .nav-list a {
   color: black;
   text-decoration: none;
   padding: 10px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .buttons {
@@ -173,6 +195,26 @@ p {
   align-items: center;
   height: 50%;
   width: 90%;
+  overflow: hidden;
+}
+
+.cards img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.cards .ipad img,
+.cards .iphone img,
+.cards .watch img,
+.cards .macbook-pro img,
+.cards .trade-in img {
+  width: 100%;
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  overflow: hidden;
 }
 
 .cards .buttons {
@@ -212,15 +254,6 @@ text-align: center;
   text-align: center;
 }
 
-.cards .ipad img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  align-items: center;
-  justify-content: center;
-
-}
-
 .cards .iphone {
   background-color: #f5f5f7;
   width: 100%;
@@ -229,14 +262,6 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.cards .iphone img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  align-items: center;
-  justify-content: center;
 }
 
 .cards .watch {
@@ -263,15 +288,6 @@ text-align: center;
   vertical-align: middle;
 }
 
-.cards .watch img {
-  outline: red solid 1px;
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  align-items: center;
-  justify-content: center;
-}
-
 .cards .macbook-pro {
   background-color: black;
   color: #fff;
@@ -283,14 +299,6 @@ text-align: center;
   text-align: center;
 }
 
-.cards .macbook-pro img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  align-items: center;
-  justify-content: center;
-}
-
 .cards .airpods4 {
   background-image: url(assets/images/airpods4\ girl.png);
   color: #fff;
@@ -298,57 +306,32 @@ text-align: center;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  width: 100%;
+  min-height: 50%;
+  padding-bottom: 2rem;
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .cards .airpods4 .content {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+width: 90%;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
 }
-
-
 
 .cards .trade-in {
   background-color: #f5f5f7;
   width: 100%;
   height: 60vh;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-
-.cards .trade-in img {
-  width: 100%;
-  object-fit: contain;
-  align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 760px) {
-  .hero-section {
-    width: 100%;
-    outline: red solid 1px;
-    padding: 0;
-    margin: 0;
-  }
-
-}
-
-@media (max-width:480px) {
-
+  text-align: center;
 }
 
 .slideshow-container {
@@ -410,4 +393,56 @@ img {
 .footer-section p {
   font-size: small;
   text-align: left;
+}
+
+
+@media (max-width: 768px) {
+  /* Show Hamburger Button */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+
+  /* Hide Nav List by Default */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show Nav List When Active */
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  .hero-section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards .airpods4 {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
