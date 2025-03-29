@@ -2,8 +2,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', Arial, sans-serif;
-  max-width: 2600px;
-  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 button {
